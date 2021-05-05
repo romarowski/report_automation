@@ -1,8 +1,10 @@
 from modules.latex import filter_dates
+import pdb
 def stats(start_date, end_date, poll_df, var):
-    poll_df = filter_dates.filtered(start_date, end_date, poll_df)
     
-    poll_df = poll_df.groupby('Station', as_index=False).mean().reset_index()
+    poll_df = filter_dates.filtered(start_date, end_date, poll_df)
+    #pdb.set_trace()
+    #poll_df = poll_df.groupby('Station', as_index=False).mean().reset_index()
     
     maxi = poll_df[poll_df[var] == poll_df[var].max()]['Station'].\
             reset_index(drop=True)[0]

@@ -8,7 +8,7 @@ def info(start_date, end_date):
     text += '\\newcommand{\monthyear}{'+start_dt.strftime("%B")+\
             ' '+str(start_dt.year)+'}\n'
     text += '\\newcommand{\onlymonth}{'+start_dt.strftime("%B")+'}\n'
-    text += '\\newcommand{\\reportfootname}{RUH LAQ and Noise Monthly' +\
+    text += '\\newcommand{\\reportfootname}{RUH LAQ and Noise Monthly ' +\
             'Report, '+start_dt.strftime("%B") +' '+str(start_dt.year)+'}\n'
     text += '\\newcommand{\datedon}{'+today.strftime("%B")+' '+\
     str(today.year)+'}\n'

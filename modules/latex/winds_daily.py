@@ -19,8 +19,8 @@ def stats(site, start_date, end_date, date, poll_df, poll_name):
 
     if max_month_qt < max_speed_avg:
         text = '\\newcommand{\wind'+poll_name+'}{wind was blowing with a high'+\
-               ' strength from the '+ max_dir+'. Indicating a link between '+\
-               'external sources and pollutant levels.}\n'
+               ' strength from the '+ max_dir+'. Indicating a possible ' +\
+               'link between external sources and pollutant levels.}\n'
     else:
         text = '\\newcommand{\wind'+poll_name+'}{wind was mostly blowing with'+\
                ' no particuarly high speeds. Indicating a weak correlation '+\

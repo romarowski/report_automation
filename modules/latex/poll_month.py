@@ -2,12 +2,12 @@ from datetime import datetime
 import pdb
 from modules.latex import replace_formula
 def info(poll_df, start_date, poll):
-    
+    #pdb.set_trace()   
     dt = datetime.strptime(start_date, '%Y-%m-%d')
     #This line depends on the available data!
     #df = poll_df[poll_df['Year']==dt.year][[poll, 'Month']]
-    df = poll_df[[poll, 'Month']]
-    df = df.groupby(by='Month')[poll].mean().reset_index(name="Avg")
+    df = poll_df[[poll, 'Month Index']]
+    df = df.groupby(by='Month Index')[poll].mean().reset_index(name="Avg")
     #pdb.set_trace()
     change = df['Avg'].pct_change().iloc[-1]
 
